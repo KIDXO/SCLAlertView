@@ -770,6 +770,7 @@ SCLTimerDisplay *buttonTimer;
     else if (btn.actionType == SCLSelector)
     {
         UIControl *ctrl = [[UIControl alloc] init];
+        ctrl.tag = btn.tag;
         [ctrl sendAction:btn.selector to:btn.target forEvent:nil];
     }
     else
